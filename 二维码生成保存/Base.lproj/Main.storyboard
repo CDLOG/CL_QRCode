@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FVx-NQ-R56">
+                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="YA1-ts-j6G"/>
+                                    <constraint firstAttribute="width" constant="150" id="tS7-ap-UnJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-B0-U5n">
+                                <rect key="frame" x="235" y="440" width="77" height="30"/>
+                                <state key="normal" title="保存二维码"/>
+                                <connections>
+                                    <action selector="saveQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2nt-6t-i2v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgw-4T-1XU">
+                                <rect key="frame" x="87" y="440" width="108" height="30"/>
+                                <state key="normal" title="扫描图中二维码"/>
+                                <connections>
+                                    <action selector="searchQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yto-hk-TGa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poC-z8-I4G">
+                                <rect key="frame" x="149" y="215" width="77" height="30"/>
+                                <state key="normal" title="生成二维码"/>
+                                <connections>
+                                    <action selector="creatQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdF-MM-iJY"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="www.baidu.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWF-SQ-RZe">
+                                <rect key="frame" x="125.5" y="140" width="124" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPv-y0-rOE">
+                                <rect key="frame" x="227" y="478" width="92" height="30"/>
+                                <state key="normal" title="相册选择图片"/>
+                                <connections>
+                                    <action selector="loadPhpto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o8O-b1-5tb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bza-a0-VNq">
+                                <rect key="frame" x="87" y="478" width="108" height="30"/>
+                                <state key="normal" title="相机扫描二维码"/>
+                                <connections>
+                                    <action selector="searchQRcode2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ps1-67-HZ7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="poC-z8-I4G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Mv-oK-07k"/>
+                            <constraint firstItem="CPv-y0-rOE" firstAttribute="leading" secondItem="Bza-a0-VNq" secondAttribute="trailing" constant="32" id="85C-oh-ssH"/>
+                            <constraint firstItem="Wvw-B0-U5n" firstAttribute="leading" secondItem="Sgw-4T-1XU" secondAttribute="trailing" constant="40" id="Aki-ir-p8f"/>
+                            <constraint firstItem="FVx-NQ-R56" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ED4-Rp-hbc"/>
+                            <constraint firstItem="Bza-a0-VNq" firstAttribute="top" secondItem="Sgw-4T-1XU" secondAttribute="bottom" constant="8" id="FQW-Te-3GU"/>
+                            <constraint firstItem="Sgw-4T-1XU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="JPf-o3-u6Y"/>
+                            <constraint firstItem="Bza-a0-VNq" firstAttribute="leading" secondItem="Sgw-4T-1XU" secondAttribute="leading" id="LTU-6J-g8b"/>
+                            <constraint firstItem="CPv-y0-rOE" firstAttribute="top" secondItem="Wvw-B0-U5n" secondAttribute="bottom" constant="8" id="QVm-Vg-3hQ"/>
+                            <constraint firstItem="fWF-SQ-RZe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="QwO-91-0mg"/>
+                            <constraint firstItem="Sgw-4T-1XU" firstAttribute="top" secondItem="FVx-NQ-R56" secondAttribute="bottom" constant="31.5" id="YhB-Bn-Cr3"/>
+                            <constraint firstItem="fWF-SQ-RZe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b3w-pq-iQl"/>
+                            <constraint firstItem="FVx-NQ-R56" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ggU-kw-tvq"/>
+                            <constraint firstItem="Wvw-B0-U5n" firstAttribute="top" secondItem="FVx-NQ-R56" secondAttribute="bottom" constant="31.5" id="hVE-dQ-rV8"/>
+                            <constraint firstItem="FVx-NQ-R56" firstAttribute="top" secondItem="poC-z8-I4G" secondAttribute="bottom" constant="13.5" id="y7h-Dj-xSd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fieldResult" destination="fWF-SQ-RZe" id="UOl-x9-O3i"/>
+                        <outlet property="imageView" destination="FVx-NQ-R56" id="CYS-83-gRm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
